@@ -1,5 +1,5 @@
 # Java Sound API in GraalVM
-All files are in `src/main`. Tested in two configurations:
+All files are in `src/main/java`. Tested in two configurations on a MacBook M3 Pro:
 ```
  Java version: 21.0.2+13, vendor version: GraalVM CE 21.0.2+13.1
  Graal compiler: optimization level: 2, target machine: armv8-a
