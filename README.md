@@ -1,3 +1,19 @@
+# Java Sound API in GraalVM
+All files are in `src/main`. Tested in two configurations:
+```
+ Java version: 21.0.2+13, vendor version: GraalVM CE 21.0.2+13.1
+ Graal compiler: optimization level: 2, target machine: armv8-a
+ C compiler: cc (apple, arm64, 15.0.0)
+ Garbage collector: Serial GC (max heap size: 80% of RAM)
+```
+
+```
+ Java version: 22.0.2+9, vendor version: GraalVM CE 22.0.2+9.1
+ Graal compiler: optimization level: 2, target machine: armv8-a
+ C compiler: cc (apple, arm64, 15.0.0)
+ Garbage collector: Serial GC (max heap size: 80% of RAM)
+```
+
 # Get mixers (Main)
 ## Java execution
 ```shell
@@ -57,6 +73,7 @@ The same thing happens when using just one of the three config files (all tested
 
 
 # ManualMain
+Results: Same behaviour as with Main (works with Java, no returned AudioMixers after Graal native-image)
 ## Java execution
 ```shell
 $GRAALVM_HOME/bin/javac ManualMain.java
